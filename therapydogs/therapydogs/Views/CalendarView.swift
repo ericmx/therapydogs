@@ -1,5 +1,5 @@
 //
-//  InPersonVisit.swift
+//  Calendar.swift
 //  therapydogs
 //
 //  Created by Eric May on 10/14/23.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct InPersonVisit: View {
+struct CalendarView: View {
     var body: some View {
-        Text("InPersionView")
+        Text("Calendar View")
+        
     }
 }
-
