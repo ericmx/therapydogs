@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
     var dogs: [TherapyDog] = [
         TherapyDog(dogName: "Brienne", dogDescription: "Brienne is a Yellow Labrador Retriever named after Brienne of Tarth, a Game of Thrones character. Brienne was born January 21, 2017. Her best friend is her fur brother, Henry, and her favorite treat is pineapple. Brienne’s handler is Beth.", dogImage: UIImage(imageLiteralResourceName: "Brienne.png")),
@@ -17,7 +18,8 @@ struct ContentView: View {
         TherapyDog(dogName: "Shiloh", dogDescription: "Shiloh is an English Cream Golden Retriever. He was born September 3, 2017. Shiloh’s best friends are his fur brother, Grady, and cat, Izzy. Although he isn’t sure Izzy likes him. Shiloh’s favorite toy is his Billie bear and his special talent is that he can do an Elvis impersonation! Shiloh’s handler is Mary.", dogImage: UIImage(imageLiteralResourceName: "Shiloh.png")),
     ]
     
-    
+    @State private var imageIndex = 0
+
     var body: some View {
         NavigationStack {
             HStack {
@@ -37,20 +39,32 @@ struct ContentView: View {
                 }
                 .padding()
                 VStack {
-                    Text(dogs[0].dogName)
-                        .font(.title)
-                    Image(uiImage: dogs[0].dogImage)
-                        .resizable()
-                    Text(dogs[0].dogDescription)
-                        .font(.subheadline)
-                    
+                    Text(dogs[imageIndex].dogName)
+                                    .font(.largeTitle)
+                    Image(uiImage: dogs[imageIndex].dogImage)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                    Text(dogs[imageIndex].dogDescription)
+                                    .font(.subheadline)
+                }
+                .frame(width: 400, height: 600)
+                .onAppear {
+                    Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { timer in
+                        self.nextImage()
+                    }
                 }
                 .frame(width: 450, height: 500)
             }
             .navigationTitle("Welcome to Therapy Dogs")
         }
+            
     }
+    func nextImage() {
+        imageIndex = (imageIndex + 1) % dogs.count
+    }
+
 }
+    
 
 #Preview {
     ContentView()
