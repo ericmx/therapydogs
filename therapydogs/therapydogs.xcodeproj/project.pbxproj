@@ -11,6 +11,8 @@
 		2E645A102ADACDDE0004D9D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E645A0F2ADACDDE0004D9D7 /* ContentView.swift */; };
 		2E645A122ADACDE00004D9D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E645A112ADACDE00004D9D7 /* Assets.xcassets */; };
 		2E645A152ADACDE00004D9D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E645A142ADACDE00004D9D7 /* Preview Assets.xcassets */; };
+		2E672B912ADAD5A10012DAFB /* TherapyDog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E672B902ADAD5A10012DAFB /* TherapyDog.swift */; };
+		2E672B932ADADBC80012DAFB /* SelectVisitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E672B922ADADBC80012DAFB /* SelectVisitType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		2E645A0F2ADACDDE0004D9D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2E645A112ADACDE00004D9D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E645A142ADACDE00004D9D7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2E672B902ADAD5A10012DAFB /* TherapyDog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapyDog.swift; sourceTree = "<group>"; };
+		2E672B922ADADBC80012DAFB /* SelectVisitType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectVisitType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,8 @@
 		2E645A0C2ADACDDE0004D9D7 /* therapydogs */ = {
 			isa = PBXGroup;
 			children = (
+				2E672B922ADADBC80012DAFB /* SelectVisitType.swift */,
+				2E672B902ADAD5A10012DAFB /* TherapyDog.swift */,
 				2E645A0D2ADACDDE0004D9D7 /* therapydogsApp.swift */,
 				2E645A0F2ADACDDE0004D9D7 /* ContentView.swift */,
 				2E645A112ADACDE00004D9D7 /* Assets.xcassets */,
@@ -138,7 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E645A102ADACDDE0004D9D7 /* ContentView.swift in Sources */,
+				2E672B932ADADBC80012DAFB /* SelectVisitType.swift in Sources */,
 				2E645A0E2ADACDDE0004D9D7 /* therapydogsApp.swift in Sources */,
+				2E672B912ADAD5A10012DAFB /* TherapyDog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
