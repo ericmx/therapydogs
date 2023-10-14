@@ -19,52 +19,51 @@ struct ContentView: View {
     ]
     
     @State private var imageIndex = 0
-
+    
     var body: some View {
         NavigationStack {
             HStack {
                 VStack {
-                    Button() {
-                        
-                    } label: {
-                        Text("Request Buddy")
-                            .foregroundColor(.white)
-                            .padding()
-                            .padding()
-                            .font(.largeTitle)
-                            .background(.red)
-                            .cornerRadius(35.0)
-                    }
-
+                    NavigationLink("Request Buddy", destination: SelectVisitType())
+                        .foregroundColor(.white)
+                        .padding()
+                        .padding()
+                        .font(.largeTitle)
+                        .background(.red)
+                        .cornerRadius(20.0)
                 }
+                .frame(width: 500, height: 700)
                 .padding()
                 VStack {
                     Text(dogs[imageIndex].dogName)
-                                    .font(.largeTitle)
+                        .font(.largeTitle)
                     Image(uiImage: dogs[imageIndex].dogImage)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .foregroundColor(.black)
+                        .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                        .cornerRadius(20.0)
                     Text(dogs[imageIndex].dogDescription)
-                                    .font(.subheadline)
+                        .font(.subheadline)
+                    
                 }
-                .frame(width: 400, height: 600)
+                .frame(width: 500, height: 700)
                 .onAppear {
                     Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { timer in
-                        self.nextImage()
+                        self.showNextImage()
                     }
                 }
-                .frame(width: 450, height: 500)
             }
             .navigationTitle("Welcome to Therapy Dogs")
         }
-            
+        
     }
-    func nextImage() {
+    func showNextImage() {
         imageIndex = (imageIndex + 1) % dogs.count
     }
-
-}
     
+}
+
 
 #Preview {
     ContentView()
