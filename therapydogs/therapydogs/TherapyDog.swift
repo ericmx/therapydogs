@@ -12,6 +12,7 @@ struct TherapyDog: Identifiable {
     let id = UUID()
     var dogName: String
     var dogDescription: String
+    var dogDescriptionShort: String
     var dogImage: UIImage
     
 }
