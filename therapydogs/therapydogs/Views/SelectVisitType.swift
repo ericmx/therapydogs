@@ -10,8 +10,8 @@ import SwiftUI
 struct SelectVisitType: View {
     var body: some View {
         VStack {
-            Text("What kind of visit would you like?")
-                .font(.system(size: 80))
+            Text("What kind of visit would you like to schedule?")
+                .font(.system(size: 70))
                 .padding(.bottom)
             HStack {
                 NavigationLink("In-Person Visit", destination: DogSelectionScreen())
