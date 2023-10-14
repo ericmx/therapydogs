@@ -44,6 +44,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E4DD53D2ADB25DC0014D1A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2E672B902ADAD5A10012DAFB /* TherapyDog.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2E645A012ADACDDE0004D9D7 = {
 			isa = PBXGroup;
 			children = (
@@ -63,9 +71,9 @@
 		2E645A0C2ADACDDE0004D9D7 /* therapydogs */ = {
 			isa = PBXGroup;
 			children = (
+				2E4DD53D2ADB25DC0014D1A1 /* Model */,
 				2E672B982ADAEEA60012DAFB /* Views */,
 				2E672B962ADAE8D30012DAFB /* InPersonVisit.swift */,
-				2E672B902ADAD5A10012DAFB /* TherapyDog.swift */,
 				2E645A0D2ADACDDE0004D9D7 /* therapydogsApp.swift */,
 				2E645A112ADACDE00004D9D7 /* Assets.xcassets */,
 				2E645A132ADACDE00004D9D7 /* Preview Content */,

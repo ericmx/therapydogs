@@ -14,5 +14,6 @@ struct TherapyDog: Identifiable {
     var dogDescription: String
     var dogDescriptionShort: String
     var dogImage: UIImage
-    
+//    var dogBreed: String
+//    var dogTrainer: String
 }

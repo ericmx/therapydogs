@@ -33,7 +33,7 @@ struct ContentView: View {
                         .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                         .cornerRadius(20.0)
                     Text(dogs[imageIndex].dogDescriptionShort)
-                        .font(.system(size: 20))
+                        .font(.system(size: 28))
                     
                 }
                 .frame(width: 600, height: 700)
