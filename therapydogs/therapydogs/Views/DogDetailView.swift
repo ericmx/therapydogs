@@ -47,8 +47,9 @@ struct DogDetailView: View {
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
+                .padding()
             }
-
+            
             if showScheduledText {
                 Text("Your event is scheduled!")
                     .font(.title)
@@ -59,10 +60,14 @@ struct DogDetailView: View {
                     Text("Dismiss")
                         .font(.title)
                         .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
+                        .foregroundColor(Color(red: 47/255, green: 79/255, blue: 79/255))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color(red: 47/255, green: 79/255, blue: 79/255), lineWidth: 3)
+                        )
+                    
                 }
+                .padding()
                 
             }
         }
