@@ -27,19 +27,19 @@ struct ContentViewTab: View {
                 }
                 .tag(1)
             
-            UserProfile()
-                .tabItem {
-                    Image(systemName: "person.crop.circle")
-                    Text("My Profile")
-                }
-                .tag(2)
-            
             Schedule()
                 .tabItem {
                     Image(systemName: "calendar")
                     Text("My Schedule")
                 }
                 .tag(3)
+            
+            UserProfile()
+                .tabItem {
+                    Image(systemName: "person.crop.circle")
+                    Text("My Profile")
+                }
+                .tag(2)
         }
     }
 }
