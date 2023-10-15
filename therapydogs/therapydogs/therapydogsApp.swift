@@ -27,14 +27,14 @@ struct ContentViewTab: View {
                 }
                 .tag(1)
             
-            PostInteractionSurveyView()
+            UserProfile()
                 .tabItem {
                     Image(systemName: "person.crop.circle")
                     Text("My Profile")
                 }
                 .tag(2)
             
-            MySchedule()
+            Schedule()
                 .tabItem {
                     Image(systemName: "calendar")
                     Text("My Schedule")
@@ -44,23 +44,3 @@ struct ContentViewTab: View {
     }
 }
 
-struct HomeView: View {
-    var body: some View {
-        Text("Welcome to the Home Tab!")
-            .font(.largeTitle)
-    }
-}
-
-struct ProfileView: View {
-    var body: some View {
-        Text("This is the Profile Tab")
-            .font(.largeTitle)
-    }
-}
-
-struct MySchedule: View {
-    var body: some View {
-        Text("Additional content in the More Tab")
-            .font(.largeTitle)
-    }
-}

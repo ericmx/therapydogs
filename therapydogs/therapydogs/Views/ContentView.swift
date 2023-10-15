@@ -20,13 +20,13 @@ struct ContentView: View {
     
     @State private var imageIndex = 0
     
-    private let hospitals: [Hospital] = [
-        Hospital(name: "James Cancer Hospital"),
-        Hospital(name: "Ross Heart Hospital"),
-        Hospital(name: "Nationwide Children's Hospital")
-    ]
+//    private let hospitals: [Hospital] = [
+//        Hospital(name: "James Cancer Hospital"),
+//        Hospital(name: "Ross Heart Hospital"),
+//        Hospital(name: "Nationwide Children's Hospital")
+//    ]
     
-    @State private var selectedHospital: Hospital = Hospital(name: "James Cancer Hospital")
+    //@State private var selectedHospital: Hospital = Hospital(name: "James Cancer Hospital")
     // switch from struct to enum: https://www.swiftyplace.com/blog/swiftui-picker-made-easy-tutorial-with-example
     
     var body: some View {
