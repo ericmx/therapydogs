@@ -33,7 +33,7 @@ struct Schedule: View {
                         Text("Give us feedback")
                     }
                     .sheet(isPresented: $isModalPresented) {
-                        ModalView(comments: "cat")
+                        ModalView(comments: "Wow! This is such a great program. I don't know what I'd do without my Therapy Dog.")
                     }
                 }
             }
@@ -45,6 +45,7 @@ struct ModalView: View {
     @Environment(\.dismiss) var dismiss
     @State var rating1 = 3
     @State var rating2 = 3
+    @State var rating3 = 3
     @State var comments: String
     
     var body: some View {
@@ -59,29 +60,32 @@ struct ModalView: View {
                     }
                 }
                 
-                Section(header: Text("Another Category Rating")) {
+                Section(header: Text("Therapy Dog Rating")) {
                     Stepper(value: $rating2, in: 1...5) {
                         Text("Rating: \(rating2)")
                     }
                 }
                 
-                Section(header: Text("Comments")) {
+                Section(header: Text("How likely are you to schedule again?")) {
+                    Stepper(value: $rating3, in: 1...5) {
+                        Text("Rating: \(rating3)")
+                    }
+                }
+                
+                Section(header: Text("Additional Comments")) {
                     TextEditor(text: $comments)
                         .frame(minHeight: 100)
                 }
+                
                 Section {
                     Button(action: {
                         dismiss()
-                    }) {
-                        Text("Submit feedback")
+                    }, label: {
+                        Text("Submit")
                             .font(.title)
                             .padding()
-                            .foregroundColor(Color(red: 47/255, green: 79/255, blue: 79/255))
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 20)
-                                    .stroke(Color(red: 47/255, green: 79/255, blue: 79/255), lineWidth: 3)
-                            )
-                    }
+                    })
+                    .frame(maxWidth: .infinity)
                 }
             }
         }

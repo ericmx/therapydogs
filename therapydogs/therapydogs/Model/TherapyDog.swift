@@ -8,12 +8,10 @@
 import Foundation
 import SwiftUI
 
-struct TherapyDog: Identifiable {
+struct TherapyDog: Identifiable, Hashable {
     let id = UUID()
     var dogName: String
     var dogDescription: String
     var dogDescriptionShort: String
     var dogImage: UIImage
-//    var dogBreed: String
-//    var dogTrainer: String
 }
