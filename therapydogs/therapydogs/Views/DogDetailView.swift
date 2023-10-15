@@ -27,7 +27,7 @@ struct DogDetailView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .foregroundColor(.black)
-                    .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                    .shadow(radius: 10)
                     .cornerRadius(20.0)
                     .padding()
                 Text(dog.dogDescription)
