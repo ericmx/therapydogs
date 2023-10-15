@@ -22,7 +22,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             HStack {
-                VStack {
+                VStack(spacing: 10) {
                     Text(dogs[imageIndex].dogName)
                         .font(.custom("Chalkboard SE", size: 60))
                     Image(uiImage: dogs[imageIndex].dogImage)
@@ -33,7 +33,6 @@ struct ContentView: View {
                         .cornerRadius(20.0)
                     Text(dogs[imageIndex].dogDescriptionShort)
                         .font(.system(size: 28))
-                    
                 }
                 .frame(width: 600, height: 700)
                 .onAppear {
@@ -52,16 +51,14 @@ struct ContentView: View {
                 }
                 
             }
-            .navigationTitle("TherapyDog")
         }
-        
     }
+    
     func showNextImage() {
         imageIndex = (imageIndex + 1) % dogs.count
     }
     
 }
-
 
 #Preview {
     ContentView()

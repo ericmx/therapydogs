@@ -46,7 +46,7 @@ struct DogSelectionScreen: View {
             }
         }
         .sheet(item: $selectedDog) { dog in
-                    DogDetailView(dog: dog)
-                }
+            DogDetailView(dog: dog)
+        }
     }
 }
