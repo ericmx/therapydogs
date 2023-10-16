@@ -20,7 +20,7 @@ struct DogDetailView: View {
     
     var body: some View {
         ScrollView {
-            VStack {
+            VStack(spacing: 5) {
                 Text(dog.dogName)
                     .font(.custom("Chalkboard SE", size: 60))
                 Image(uiImage: dog.dogImage)
